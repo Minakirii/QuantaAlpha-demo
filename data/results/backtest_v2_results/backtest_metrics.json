@@ -1,0 +1,23 @@
+{
+  "experiment_name": "baseline_demo",
+  "factor_source": "alpha158_20",
+  "num_factors": 20,
+  "metrics": {
+    "IC": 0.005071733580974594,
+    "ICIR": 0.03287938627233084,
+    "Rank IC": 0.01838526953812549,
+    "Rank ICIR": 0.11770777250034052,
+    "annualized_return": 0.04629928329578075,
+    "information_ratio": 0.5043710541234924,
+    "max_drawdown": -0.2218958292110947,
+    "calmar_ratio": 0.20865323814507195
+  },
+  "config": {
+    "data_range": "2016-01-01 ~ 2025-12-26",
+    "test_range": "2022-01-01 ~ 2025-12-26",
+    "backtest_range": "2022-01-01 ~ 2025-12-26",
+    "market": "csi300",
+    "benchmark": "SH000300"
+  },
+  "elapsed_seconds": 334.94869589805603
+}
