@@ -68,6 +68,8 @@ pip-delete-this-directory.txt
 # ---- Data & Results (local experiment outputs) ----
 data/
 hf_data/
+data/results/
+data/git_ignore_folder/
 mlruns/
 reports/
 backtest_v2_results/
