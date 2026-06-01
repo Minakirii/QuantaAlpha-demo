@@ -1,0 +1,67 @@
+{
+  "trajectories": {
+    "65f050e2a0a4": {
+      "trajectory_id": "65f050e2a0a4",
+      "direction_id": 0,
+      "round_idx": 0,
+      "phase": "original",
+      "hypothesis": "Hypothesis: The imbalance between buy and sell order volumes in the limit order book, aggregated over 1-minute and 5-minute intraday windows, positively predicts next-period stock returns, with stronger predictive power for smaller-cap stocks and during high-volatility periods, and provides incremental alpha beyond daily price-volume factors.\n                Concise Observation: Daily price-volume factors often miss intraday microstructural dynamics; order imbalance aggregates over multiple time windows may capture residual predictive signals not fully explained by daily data.\n                Concise Justification: Limit order book imbalance measures the net pressure from buy versus sell orders, which prior microstructure theory suggests contains information about short-term price trends and informed trading, offering orthogonal predictive power relative to traditional factors.\n                Concise Knowledge: When order flow imbalance is persistent across short intraday windows (e.g., 1-minute and 5-minute), it reflects informed trading or momentum pressure, which can predict short-term returns; the effect is amplified for less liquid stocks and during volatile market conditions.\n                concise Specification: For each stock and each trading day, compute buy order volume minus sell order volume divided by total order volume over fixed 1-minute and 5-minute intraday windows; the factor is the cross-sectional rank of the weighted average of these imbalances; test on stocks with available intraday order book data, excluding period with missing data; expected positive relationship with next-day returns, controlling for daily return, volume, and volatility.\n                ",
+      "hypothesis_details": {
+        "hypothesis": "The imbalance between buy and sell order volumes in the limit order book, aggregated over 1-minute and 5-minute intraday windows, positively predicts next-period stock returns, with stronger predictive power for smaller-cap stocks and during high-volatility periods, and provides incremental alpha beyond daily price-volume factors.",
+        "reason": "",
+        "concise_reason": "",
+        "concise_observation": "Daily price-volume factors often miss intraday microstructural dynamics; order imbalance aggregates over multiple time windows may capture residual predictive signals not fully explained by daily data.",
+        "concise_justification": "Limit order book imbalance measures the net pressure from buy versus sell orders, which prior microstructure theory suggests contains information about short-term price trends and informed trading, offering orthogonal predictive power relative to traditional factors.",
+        "concise_knowledge": "When order flow imbalance is persistent across short intraday windows (e.g., 1-minute and 5-minute), it reflects informed trading or momentum pressure, which can predict short-term returns; the effect is amplified for less liquid stocks and during volatile market conditions."
+      },
+      "factors": [],
+      "backtest_result": null,
+      "backtest_metrics": {},
+      "feedback": "",
+      "feedback_details": {},
+      "parent_ids": [],
+      "created_at": "2026-05-31T23:29:36.975474",
+      "extra_info": {}
+    },
+    "88960a6d8d27": {
+      "trajectory_id": "88960a6d8d27",
+      "direction_id": 1,
+      "round_idx": 0,
+      "phase": "original",
+      "hypothesis": "Hypothesis: The ratio of a stock's realized volatility to its implied volatility (proxied by sector-level VIX), when deviating significantly from the sector average, predicts short-term reversals over a 1-5 day horizon, as this volatility-anomaly captures mispricing distinct from traditional price-volume signals.\n                Concise Observation: Cross-sectional volatility clustering often leads to persistent deviations in realized volatility relative to implied expectations, which can be exploited for mean-reversion strategies.\n                Concise Justification: Implied volatility reflects market expectations, while realized volatility captures actual price fluctuations; large deviations indicate overreaction or underreaction to volatility shocks, which tend to reverse as new information is absorbed.\n                Concise Knowledge: If a stock's realized-to-implied volatility ratio deviates from its sector average, then it may signal temporary mispricing due to volatility clustering, leading to short-term price reversals within 1-5 days.\n                concise Specification: For each stock, compute the 20-day realized volatility and divide by the sector-level VIX (or a 20-day rolling implied volatility proxy); then calculate the cross-sectional z-score of this ratio relative to the sector average; stocks with extreme z-scores (e.g., absolute value > 2) are expected to exhibit negative returns over the next 1-5 days.\n                ",
+      "hypothesis_details": {
+        "hypothesis": "The ratio of a stock's realized volatility to its implied volatility (proxied by sector-level VIX), when deviating significantly from the sector average, predicts short-term reversals over a 1-5 day horizon, as this volatility-anomaly captures mispricing distinct from traditional price-volume signals.",
+        "reason": "",
+        "concise_reason": "",
+        "concise_observation": "Cross-sectional volatility clustering often leads to persistent deviations in realized volatility relative to implied expectations, which can be exploited for mean-reversion strategies.",
+        "concise_justification": "Implied volatility reflects market expectations, while realized volatility captures actual price fluctuations; large deviations indicate overreaction or underreaction to volatility shocks, which tend to reverse as new information is absorbed.",
+        "concise_knowledge": "If a stock's realized-to-implied volatility ratio deviates from its sector average, then it may signal temporary mispricing due to volatility clustering, leading to short-term price reversals within 1-5 days."
+      },
+      "factors": [],
+      "backtest_result": null,
+      "backtest_metrics": {},
+      "feedback": "",
+      "feedback_details": {},
+      "parent_ids": [],
+      "created_at": "2026-05-31T23:34:23.134764",
+      "extra_info": {}
+    }
+  },
+  "by_direction": {
+    "0": [
+      "65f050e2a0a4"
+    ],
+    "1": [
+      "88960a6d8d27"
+    ]
+  },
+  "by_phase": {
+    "original": [
+      "65f050e2a0a4",
+      "88960a6d8d27"
+    ],
+    "mutation": [],
+    "crossover": []
+  },
+  "saved_at": "2026-05-31T23:34:23.144783"
+}
